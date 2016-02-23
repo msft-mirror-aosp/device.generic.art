@@ -27,10 +27,4 @@ TARGET_PREFER_32_BIT_APPS :=
 TARGET_SUPPORTS_32_BIT_APPS :=
 TARGET_SUPPORTS_64_BIT_APPS := true
 
-# Build with GCC, as building with Clang exhibit the following build
-# error for dex2oat (b/27310199):
-#
-#   art/dex2oat/dex2oat.cc:2606:5: error: stack frame size of 1808
-#   bytes in function 'main' [-Werror,-Wframe-larger-than=]
-#
-USE_CLANG_PLATFORM_BUILD := false
+USE_CLANG_PLATFORM_BUILD := true
