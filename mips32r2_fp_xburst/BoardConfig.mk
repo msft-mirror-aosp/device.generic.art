@@ -24,7 +24,4 @@ TARGET_CPU_VARIANT :=
 TARGET_ARCH_VARIANT := mips32r2-fp-xburst
 ARCH_MIPS_PAGE_SHIFT := 12
 
-# Build with GCC, as building with Clang breaks some ART tests:
-# - codegen_test, failing on SIGILL ("Illegal instruction") (b/26635783);
-# - 055-enum-performance (taking to long to complete) (b/26636096).
-USE_CLANG_PLATFORM_BUILD := false
+USE_CLANG_PLATFORM_BUILD := true
