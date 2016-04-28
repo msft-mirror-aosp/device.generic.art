@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+PRODUCT_COPY_FILES += \
+    art/tools/public.libraries.buildbot.txt:system/etc/public.libraries.txt
+
 $(call inherit-product, build/target/product/core_base.mk)
 
 PRODUCT_NAME := arm_krait
