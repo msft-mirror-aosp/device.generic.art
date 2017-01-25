@@ -23,3 +23,6 @@ PRODUCT_MODEL := MIPS64 Release 6
 
 # Force 64bits executables.
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.zygote=zygote64
+
+# MIPS64 doesn't yet have support for ART read barriers.
+PRODUCT_ART_USE_READ_BARRIER := false
