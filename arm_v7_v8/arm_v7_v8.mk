@@ -20,3 +20,6 @@ PRODUCT_NAME := arm_v7_v8
 PRODUCT_DEVICE := arm_v7_v8
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := ARM v7 and v8
+
+# Disable debug binaries for an unbundled ART build.
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
