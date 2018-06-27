@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, build/target/product/core_base.mk)
+$(call inherit-product, build/target/product/core_minimal.mk)
 
 PRODUCT_NAME := mips32r2_fp
 PRODUCT_DEVICE := mips32r2_fp
