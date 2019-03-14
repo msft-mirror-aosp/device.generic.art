@@ -16,3 +16,6 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/mips32r2_fp.mk
+
+COMMON_LUNCH_CHOICES := \
+    mips32r2_fp-eng

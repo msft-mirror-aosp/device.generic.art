@@ -16,3 +16,6 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/armv8_kryo385.mk
+
+COMMON_LUNCH_CHOICES := \
+    armv8_kryo385-eng

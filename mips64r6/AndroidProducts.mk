@@ -16,3 +16,6 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/mips64r6.mk
+
+COMMON_LUNCH_CHOICES := \
+    mips64r6-eng

@@ -16,3 +16,6 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/arm_krait.mk
+
+COMMON_LUNCH_CHOICES := \
+    arm_krait-eng
