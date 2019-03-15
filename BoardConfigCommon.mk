@@ -20,3 +20,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_KERNEL := true
 
 TARGET_CPU_SMP := true
+
+# Flatten APEX packages to make them simpler to use in
+# ART testing/benchmarking environments.
+TARGET_FLATTEN_APEX := true
