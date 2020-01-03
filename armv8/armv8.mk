@@ -14,7 +14,10 @@
 # limitations under the License.
 #
 
-$(call inherit-product, build/target/product/core_base.mk)
+PRODUCT_COPY_FILES += \
+    art/tools/public.libraries.buildbot.txt:system/etc/public.libraries.txt
+
+$(call inherit-product, build/target/product/core_minimal.mk)
 
 PRODUCT_NAME := armv8
 PRODUCT_DEVICE := armv8

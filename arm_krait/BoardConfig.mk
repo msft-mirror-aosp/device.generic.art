@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 
-TARGET_NO_BOOTLOADER := true
-TARGET_NO_KERNEL := true
+include device/generic/art/BoardConfigCommon.mk
+
 TARGET_ARCH := arm
 
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := krait
 TARGET_ARCH_VARIANT := armv7-a-neon
+

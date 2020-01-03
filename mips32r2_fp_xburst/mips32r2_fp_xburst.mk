@@ -1,5 +1,5 @@
-
-# Copyright (C) 2014 The Android Open-Source Project
+#
+# Copyright (C) 2016 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,15 +14,12 @@
 # limitations under the License.
 #
 
-include device/generic/art/BoardConfigCommon.mk
+PRODUCT_COPY_FILES += \
+    art/tools/public.libraries.buildbot.txt:system/etc/public.libraries.txt
 
-TARGET_ARCH := arm64
+$(call inherit-product, build/target/product/core_minimal.mk)
 
-TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_VARIANT := generic
-TARGET_ARCH_VARIANT := armv8-a
-
-TARGET_PREFER_32_BIT_APPS :=
-TARGET_SUPPORTS_32_BIT_APPS :=
-TARGET_SUPPORTS_64_BIT_APPS := true
-
+PRODUCT_NAME := mips32r2_fp_xburst
+PRODUCT_DEVICE := mips32r2_fp_xburst
+PRODUCT_BRAND := Android
+PRODUCT_MODEL := MIPS32 Release 2 on Ingenic XBurst CPU

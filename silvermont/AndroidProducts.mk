@@ -16,3 +16,6 @@
 
 PRODUCT_MAKEFILES := \
      $(LOCAL_DIR)/silvermont.mk \
+
+COMMON_LUNCH_CHOICES := \
+    silvermont-eng

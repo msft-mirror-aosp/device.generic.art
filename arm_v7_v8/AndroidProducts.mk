@@ -1,5 +1,5 @@
-
-# Copyright (C) 2014 The Android Open-Source Project
+#
+# Copyright (C) 2017 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,15 +14,11 @@
 # limitations under the License.
 #
 
-include device/generic/art/BoardConfigCommon.mk
+# A small device description to get the required ART binaries
+# built for a duo 32 and 64 bit ARM processor.
 
-TARGET_ARCH := arm64
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/arm_v7_v8.mk
 
-TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_VARIANT := generic
-TARGET_ARCH_VARIANT := armv8-a
-
-TARGET_PREFER_32_BIT_APPS :=
-TARGET_SUPPORTS_32_BIT_APPS :=
-TARGET_SUPPORTS_64_BIT_APPS := true
-
+COMMON_LUNCH_CHOICES := \
+    arm_v7_v8-eng

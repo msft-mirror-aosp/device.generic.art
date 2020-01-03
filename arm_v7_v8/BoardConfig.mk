@@ -1,5 +1,5 @@
 
-# Copyright (C) 2014 The Android Open-Source Project
+# Copyright (C) 2017 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,7 +22,15 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_VARIANT := generic
 TARGET_ARCH_VARIANT := armv8-a
 
-TARGET_PREFER_32_BIT_APPS :=
-TARGET_SUPPORTS_32_BIT_APPS :=
+TARGET_2ND_ARCH := arm
+TARGET_2ND_ARCH_VARIANT := armv7-a-neon
+TARGET_2ND_CPU_VARIANT := cortex-a15
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+
+TARGET_SUPPORTS_32_BIT_APPS := true
 TARGET_SUPPORTS_64_BIT_APPS := true
 
+
+# Disable dexpreopt for an unbundled ART build.
+WITH_DEXPREOPT := false

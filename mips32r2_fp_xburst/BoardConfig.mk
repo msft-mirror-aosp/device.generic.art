@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The Android Open Source Project
+# Copyright (C) 2016 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,4 +14,11 @@
 # limitations under the License.
 #
 
-add_lunch_combo arm_krait-eng
+include device/generic/art/BoardConfigCommon.mk
+
+TARGET_ARCH := mips
+
+TARGET_CPU_ABI := mips
+TARGET_CPU_VARIANT :=
+TARGET_ARCH_VARIANT := mips32r2-fp-xburst
+

@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-TARGET_NO_BOOTLOADER := true
-TARGET_NO_KERNEL := true
+include device/generic/art/BoardConfigCommon.mk
+
 TARGET_ARCH := x86
 
 TARGET_CPU_ABI := x86
-TARGET_CPU_SMP := true
 TARGET_ARCH_VARIANT := silvermont
+

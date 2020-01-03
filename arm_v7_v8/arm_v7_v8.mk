@@ -1,5 +1,5 @@
-
-# Copyright (C) 2014 The Android Open-Source Project
+#
+# Copyright (C) 2017 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,15 +14,12 @@
 # limitations under the License.
 #
 
-include device/generic/art/BoardConfigCommon.mk
+$(call inherit-product, build/target/product/core_minimal.mk)
 
-TARGET_ARCH := arm64
+PRODUCT_NAME := arm_v7_v8
+PRODUCT_DEVICE := arm_v7_v8
+PRODUCT_BRAND := Android
+PRODUCT_MODEL := ARM v7 and v8
 
-TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_VARIANT := generic
-TARGET_ARCH_VARIANT := armv8-a
-
-TARGET_PREFER_32_BIT_APPS :=
-TARGET_SUPPORTS_32_BIT_APPS :=
-TARGET_SUPPORTS_64_BIT_APPS := true
-
+# Disable debug binaries for an unbundled ART build.
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
