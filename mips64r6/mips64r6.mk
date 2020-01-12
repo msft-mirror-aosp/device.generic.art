@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, build/target/product/core_base.mk)
+$(call inherit-product, build/target/product/core_minimal.mk)
 
 PRODUCT_NAME := mips64r6
 PRODUCT_DEVICE := mips64r6
