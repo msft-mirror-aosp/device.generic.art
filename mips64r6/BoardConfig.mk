@@ -14,12 +14,11 @@
 # limitations under the License.
 #
 
-TARGET_NO_BOOTLOADER := true
-TARGET_NO_KERNEL := true
+include device/generic/art/BoardConfigCommon.mk
+
 TARGET_ARCH := mips64
 
 TARGET_CPU_ABI := mips64
-TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := generic
 TARGET_ARCH_VARIANT := mips64r6
 
