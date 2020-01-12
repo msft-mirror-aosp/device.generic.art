@@ -34,7 +34,5 @@ TARGET_SUPPORTS_64_BIT_APPS := true
 
 USE_CLANG_PLATFORM_BUILD := true
 
-# Disable debug binaries and dexpreopt for
-# an unbundled ART build.
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+# Disable dexpreopt for an unbundled ART build.
 WITH_DEXPREOPT := false
