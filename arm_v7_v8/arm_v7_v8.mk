@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, build/target/product/core_base.mk)
+$(call inherit-product, build/target/product/core_minimal.mk)
 
 PRODUCT_NAME := arm_v7_v8
 PRODUCT_DEVICE := arm_v7_v8
