@@ -20,3 +20,6 @@ PRODUCT_NAME := mips32r2_fp
 PRODUCT_DEVICE := mips32r2_fp
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := MIPS32 Release 2
+
+# MIPS32 doesn't yet have support for ART read barriers.
+PRODUCT_ART_USE_READ_BARRIER := false
