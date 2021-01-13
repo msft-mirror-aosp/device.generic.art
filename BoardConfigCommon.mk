@@ -31,6 +31,5 @@ TARGET_FLATTEN_APEX := true
 # tree.
 # TODO(b/174997203): Clean this up when there is a better way to switch between
 # prebuilts and sources.
-SOONG_CONFIG_NAMESPACES += art_module
-SOONG_CONFIG_art_module += source_build
-SOONG_CONFIG_art_module_source_build := true
+$(call add_soong_config_namespace,art_module)
+$(call add_soong_config_var_value,art_module,source_build,true)
