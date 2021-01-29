@@ -14,8 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_x86_64.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/module_x86_64.mk)
 $(call inherit-product, device/generic/art/art_module/art_module.mk)
 
 PRODUCT_NAME := art_module_x86_64
-PRODUCT_DEVICE := generic_x86_64
