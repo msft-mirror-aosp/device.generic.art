@@ -21,10 +21,6 @@ TARGET_NO_KERNEL := true
 
 TARGET_CPU_SMP := true
 
-# Flatten APEX packages to make them simpler to use in
-# ART testing/benchmarking environments.
-TARGET_FLATTEN_APEX := true
-
 # Enable ART Module top level apex/sdk/module_export modules. When they are
 # enabled the ART Module prebuilts (packages/modules/ArtPrebuilt and
 # prebuilts/module_sdk/art) cannot be present with prefer:true in the build
