@@ -27,5 +27,4 @@ TARGET_CPU_SMP := true
 # tree.
 # TODO(b/174997203): Clean this up when there is a better way to switch between
 # prebuilts and sources.
-$(call add_soong_config_namespace,art_module)
-$(call add_soong_config_var_value,art_module,source_build,true)
+$(call soong_config_set,art_module,source_build,true)
