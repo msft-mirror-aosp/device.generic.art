@@ -1,5 +1,5 @@
-
-# Copyright (C) 2014 The Android Open-Source Project
+#
+# Copyright (C) 2020 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,12 +14,7 @@
 # limitations under the License.
 #
 
-include device/generic/art/BoardConfigCommon.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/module_x86_64.mk)
+$(call inherit-product, device/generic/art/art_module/art_module.mk)
 
-TARGET_ARCH := arm64
-
-TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_VARIANT := generic
-TARGET_ARCH_VARIANT := armv8-a
-
-TARGET_SUPPORTS_64_BIT_APPS := true
+PRODUCT_NAME := art_module_x86_64
