@@ -1,5 +1,5 @@
-#
-# Copyright (C) 2020 The Android Open Source Project
+
+# Copyright (C) 2023 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,15 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/module_x86.mk)
-$(call inherit-product, device/generic/art/art_module/art_module.mk)
+include device/generic/art/BoardConfigCommon.mk
 
-PRODUCT_NAME := art_module_x86
+TARGET_ARCH := riscv64
+
+TARGET_CPU_ABI := riscv64
+TARGET_CPU_VARIANT := generic
+TARGET_ARCH_VARIANT :=
+
+TARGET_SUPPORTS_64_BIT_APPS := true
+
+# Temporary hack while prebuilt modules are missing riscv64.
+ALLOW_MISSING_DEPENDENCIES := true
