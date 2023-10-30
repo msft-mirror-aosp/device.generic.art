@@ -18,4 +18,4 @@ PRODUCT_MAKEFILES := \
      $(LOCAL_DIR)/silvermont.mk \
 
 COMMON_LUNCH_CHOICES := \
-    silvermont-eng
+    silvermont-trunk_staging-eng
