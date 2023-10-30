@@ -21,4 +21,4 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/arm_v7_v8.mk
 
 COMMON_LUNCH_CHOICES := \
-    arm_v7_v8-eng
+    arm_v7_v8-trunk_staging-eng
