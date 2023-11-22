@@ -18,4 +18,4 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/armv8_cortex_a55.mk
 
 COMMON_LUNCH_CHOICES := \
-    armv8_cortex_a55-eng
+    armv8_cortex_a55-trunk_staging-eng

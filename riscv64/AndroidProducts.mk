@@ -18,4 +18,4 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/riscv64.mk
 
 COMMON_LUNCH_CHOICES := \
-    riscv64-eng
+    riscv64-trunk_staging-eng
