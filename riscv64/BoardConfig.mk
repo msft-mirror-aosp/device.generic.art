@@ -1,5 +1,5 @@
-#
-# Copyright (C) 2020 The Android Open Source Project
+
+# Copyright (C) 2023 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,15 @@
 # limitations under the License.
 #
 
-# Enable ART Module top level apex/sdk/module_export modules. When they are
-# enabled the ART Module prebuilts (packages/modules/ArtPrebuilt and
-# prebuilts/module_sdk/art) cannot be present with prefer:true in the build
-# tree.
-# TODO(b/174997203): Clean up the art_module_* products when there is a better
-# way to switch between prebuilts and sources.
-$(call soong_config_set,art_module,source_build,true)
+include device/generic/art/BoardConfigCommon.mk
+
+TARGET_ARCH := riscv64
+
+TARGET_CPU_ABI := riscv64
+TARGET_CPU_VARIANT := generic
+TARGET_ARCH_VARIANT :=
+
+TARGET_SUPPORTS_64_BIT_APPS := true
+
+# Temporary hack while prebuilt modules are missing riscv64.
+ALLOW_MISSING_DEPENDENCIES := true
