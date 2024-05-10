@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The Android Open Source Project
+# Copyright (C) 2023 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,15 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/module_arm.mk)
-$(call inherit-product, device/generic/art/art_module/art_module.mk)
+PRODUCT_COPY_FILES += \
+    art/tools/public.libraries.buildbot.txt:system/etc/public.libraries.txt
 
-PRODUCT_NAME := art_module_arm
+$(call inherit-product, build/target/product/core_minimal.mk)
+
+PRODUCT_NAME := riscv64
+PRODUCT_DEVICE := riscv64
+PRODUCT_BRAND := Android
+PRODUCT_MODEL := RISCV64
+
+# Force 64bits executables.
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.zygote=zygote64

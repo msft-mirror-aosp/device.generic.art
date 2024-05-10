@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The Android Open Source Project
+# Copyright (C) 2023 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,8 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/module_x86.mk)
-$(call inherit-product, device/generic/art/art_module/art_module.mk)
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/riscv64.mk
 
-PRODUCT_NAME := art_module_x86
+COMMON_LUNCH_CHOICES := \
+    riscv64-trunk_staging-eng
