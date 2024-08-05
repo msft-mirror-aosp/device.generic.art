@@ -30,7 +30,3 @@ TARGET_2ND_CPU_ABI2 := armeabi
 
 TARGET_SUPPORTS_32_BIT_APPS := true
 TARGET_SUPPORTS_64_BIT_APPS := true
-
-
-# Disable dexpreopt for an unbundled ART build.
-WITH_DEXPREOPT := false
